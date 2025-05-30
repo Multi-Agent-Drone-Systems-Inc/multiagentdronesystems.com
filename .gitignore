@@ -1,0 +1,9 @@
+# Ignore everything in this repo
+*
+
+# But don't ignore this file
+!.gitignore
+
+# Allow all future folders and files
+!*/
+!*.*
