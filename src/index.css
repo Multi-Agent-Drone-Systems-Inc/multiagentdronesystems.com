@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2family=Changa:wght@200..800&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0A0A0A;
+  --color-secondary: #FFD700;
+  --color-text: #FFFFFF;
+}
+
+html {
+  font-family: 'Chakra Petch', sans-serif;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-[#0A0A0A] text-white;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+               0 0 20px rgba(255, 255, 255, 0.5),
+               0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.glow-dark {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3),
+               0 0 20px rgba(0, 0, 0, 0.2),
+               0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.section-container {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+}
